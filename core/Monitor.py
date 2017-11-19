@@ -1,11 +1,14 @@
-
+from utils import Activity
 
 class Monitor:
     '''
-        monitor class to 
+        Base class to define set of 
+        rules for monitoring activity
+        it is recommended for any new 
+        activity to inherit this class.
     
     '''
-    def __init__(self, threshold_high, threshold_low, current_value, activity_name):
+    def __init__(self, threshold_high: float, threshold_low: float, current_value: float, activity_name: str):
         self._threshold_high = threshold_high
         self._threshold_low = threshold_low
         self._current_value = current_value
@@ -13,7 +16,7 @@ class Monitor:
 
     @property
     def threshold_high(self):
-        return self._threshold_low
+        return self._threshold_high
 
     @property
     def threshold_low(self):
@@ -35,8 +38,8 @@ class Monitor:
     def set_activity_name(self, name: str= None):
         self._activity_name = name
 
-    def monitor_activity(self):
+    def monitor_activity(self) -> Activity:
         pass
 
-    def send_notifications(self):
+    def send_notifications(self) -> bool:
         pass

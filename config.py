@@ -1,11 +1,11 @@
 from enum import Enum
 
 class CPUConstants(Enum):
-    high = 20
+    high = 40
     low = 0
 
 class MemConstants(Enum):
-    high = 30
+    high = 80
     low = 0
 
 class MeasuringInterval(Enum):
@@ -15,3 +15,5 @@ class MeasuringInterval(Enum):
 class ActivityNames(Enum):
     cpu = 'cpu'
     memory = 'memory'
+
+REST_INTERVAL = 3

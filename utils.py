@@ -1,4 +1,7 @@
 class Activity:
+    '''
+        class to define activity.
+    '''
     def __init__(self, name: str, utilization: float):
         self._name = name
         self._utilization = utilization
@@ -11,6 +14,12 @@ class Activity:
     def utilization(self):
         return self._utilization
 
+
+    '''
+        to show culprit process 
+        process consuming highest 
+        percentage of memory
+    '''
     class CulpritProcess:
         def __init__(self, id: int, name: str, utilization: float):
             self._id = id
@@ -28,6 +37,3 @@ class Activity:
         @property
         def utilization(self):
             return self._utilization
-
-global row
-global column
